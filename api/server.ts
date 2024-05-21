@@ -7,8 +7,7 @@ app.get("/", (req: Request, res: Response) => res.send("Express on Vercel"));
 
 app.get("/", (req, res) => res.send("Express on Vercel"));
 app.get('/api/data', (req: Request, res: Response) => {
-  const filePath = path.join(process.cwd(), 'public', 'coffee_menu.json');
-
+  const filePath: string = path.join(process.cwd(), 'public', 'coffee_menu.json');
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
       res.status(500).send(`Error reading file: ${err}`);
