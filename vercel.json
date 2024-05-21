@@ -5,6 +5,7 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/server.ts" },
+    { "src": "/(.*)", "dest": "/api/server.ts" },
     { "src": "/(.*)", "dest": "/public/$1" }
   ]
 }
