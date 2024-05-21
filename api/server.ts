@@ -8,8 +8,7 @@ app.get("/", (req, res) => res.send("Express on Vercel"));
 app.get('/api/data', (req: Request, res: Response) => {
   fs.readFile('api/coffee_manu.json', 'utf8', (err, data) => {
     if (err) {
-      console.error('Error reading file:', err);
-      res.status(500).send('Internal Server Error');
+      res.status(500).send(`Error reading file: ${err}`);
       return;
     }
 
