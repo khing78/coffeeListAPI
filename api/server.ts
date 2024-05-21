@@ -3,6 +3,7 @@ const app = express();
 
 app.get("/", (req: Request, res: Response) => res.send("Express on Vercel"));
 
-app.listen(3000, () => console.log("Server ready on port 3000."));
+const port = process.env.PORT;
+app.listen(port, () => console.log(`Server ready on port ${port}.`));
 
 module.exports = app;
